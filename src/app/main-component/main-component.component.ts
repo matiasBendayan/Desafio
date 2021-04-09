@@ -26,7 +26,7 @@ export class MainComponentComponent implements OnInit {
   urlGetPosts = 'https://jsonplaceholder.typicode.com/posts';
 
 
-  constructor(private http: HttpClient, public dialog: MatDialog, public router: Router) {
+  constructor(private http: HttpClient, private dialog: MatDialog, private router: Router) {
   }
 
   ngOnInit(): void {

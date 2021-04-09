@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Posts} from '../main-component/Posts';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-new-post-component',
@@ -13,7 +14,7 @@ export class NewPostComponentComponent implements OnInit {
   newPostUrl = 'https://jsonplaceholder.typicode.com/posts';
   newPost: Posts = new Posts();
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,private router: Router) {
   }
 
   ngOnInit(): void {}
@@ -27,6 +28,8 @@ export class NewPostComponentComponent implements OnInit {
       Object.assign(this.newPost, values);
     });
   }
-
+  volverPrincipal() {
+    this.router.navigateByUrl('');
+  }
 
 }

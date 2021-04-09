@@ -1,6 +1,7 @@
 <div *ngFor="let comentario of comentarios">
-<H1>Post Id{{comentario.postId}} </H1>
+<H1 id="titulo">Post Id: {{comentario.postId}} </H1>
   <h2>Nombre: {{comentario.name}}</h2>
-  <h3>{{comentario.email}}:</h3>
+  <h3 id="email">{{comentario.email}}:</h3>
   <p>{{comentario.body}}</p>
+  <mat-divider></mat-divider>
 </div>

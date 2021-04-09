@@ -7,24 +7,26 @@
     <div style="justify-content: space-around">
     </div>
     <mat-divider></mat-divider>
+    <div class="titulo">
       <mat-label>Buscador </mat-label>
       <input matInput (keyup)="applyFilter($event)">
-    <mat-table #table [dataSource]="valueList">
+    </div>
+      <mat-table #table [dataSource]="valueList">
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
 
       <ng-container matColumnDef="title">
-        <mat-header-cell *matHeaderCellDef> title</mat-header-cell>
+        <mat-header-cell class="titulo" *matHeaderCellDef>Title</mat-header-cell>
         <mat-cell *matCellDef="let element"> {{ element.title }} </mat-cell>
       </ng-container>
 
       <ng-container matColumnDef="body">
-        <mat-header-cell *matHeaderCellDef> body</mat-header-cell>
+        <mat-header-cell class="titulo" *matHeaderCellDef>Body</mat-header-cell>
         <mat-cell *matCellDef="let element"> {{ element.body }} </mat-cell>
       </ng-container>
 
       <ng-container matColumnDef="userId">
-      <mat-header-cell *matHeaderCellDef> userId</mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{ element.userId }} </mat-cell>
+      <mat-header-cell class="titulo" *matHeaderCellDef>UserId</mat-header-cell>
+      <mat-cell *matCellDef="let element" class="titulo"> {{ element.userId }} </mat-cell>
     </ng-container>
 
       <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="operModal(row)"></mat-row>

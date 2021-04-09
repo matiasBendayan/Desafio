@@ -1,9 +1,12 @@
-<h1>Agregar un post</h1>
-<mat-card>
+<h1 class="centrado">Agregar un post</h1>
+<mat-card class="centrado">
   <input matInput type="text" placeholder="Titulo" name="title" [(ngModel)]="title">
   <input matInput type="body" placeholder="Body" name="body" [(ngModel)]="body">
   <button type="button" (click)="AgregarPosts()" [disabled]="title == '' || body == ''">Agregar Posts</button>
 </mat-card>
-<div *ngIf="newPost.id != undefined">
+<div *ngIf="newPost.id != undefined" class="centrado">
 <app-mostrar-post [nuevoPost]="newPost"></app-mostrar-post>
 </div>
+<mat-card class="centrado">
+  <button type="button" (click)="volverPrincipal()">Agregar Posts</button>
+</mat-card>
